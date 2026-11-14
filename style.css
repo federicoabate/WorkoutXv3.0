@@ -204,25 +204,30 @@ button[data-action="toggleSearch"]::first-letter{font-size:19px}
 .strength-section .strength-main>.strength-row .strength-pointer{z-index:5}
 .strength-section .strength-main>.strength-row .strength-pointer-percent{bottom:1.5em}
 
-/* WorkoutX v2.8: targeted strength heading spacing */
-.strength-main>.strength-row>.row{margin-bottom:18px}
-.strength-main>.strength-row>.strength-track{margin-top:27px}
-/* Record markers remain in normal document flow, beneath their own executable set. */
-.set-record-badges{display:flex;flex-wrap:wrap;gap:5px;margin:7px 0 2px;min-height:0}
-.set-record-badges:empty{display:none}
-.record-chip{display:inline-flex;align-items:center;border-radius:6px;padding:4px 7px;font-size:10px;font-weight:750;line-height:1.2}
-.record-chip-pr{background:rgba(247,108,50,.2);border:1px solid #F76C32;color:#ffad82}
-.record-chip-secondary{background:rgba(170,170,180,.12);border:1px solid #666672;color:#d5d5df}
-/* Scrollable summary modal; no action is needed to persist the already-saved workout. */
-.workout-summary{max-height:calc(78dvh - 80px);overflow-y:auto;overscroll-behavior:contain;padding:2px 3px 20px}
-.summary-meta{border-bottom:1px solid var(--line);padding:5px 0 13px;line-height:1.7}
-.summary-meta strong{color:var(--accent)}
-.workout-summary h4{margin:19px 0 8px}
-.summary-pr{border:1px solid #975032;border-radius:12px;padding:12px;margin:10px 0;background:rgba(247,108,50,.06)}
-.summary-pr>strong{display:inline-block;background:#F76C32;color:#1A0D07;border-radius:5px;padding:3px 8px;font-size:11px;margin-bottom:8px}
-.summary-pr-result{border:1px solid #74442d;border-radius:8px;background:#241b18;margin-top:8px;padding:10px;font-size:17px;font-weight:800}
-.summary-entry{display:flex;justify-content:space-between;gap:12px;align-items:center;border-bottom:1px solid var(--line);padding:9px 1px}
-.summary-entry>span{overflow-wrap:anywhere;min-width:0}
-.summary-entry>strong{white-space:nowrap}
-.summary-ok{color:#50c878;font-size:17px}
-.summary-no{color:#f36b6b;font-size:17px}
+/* WorkoutX v2.9: localized additions, no changes to existing palette. */
+.strength-section .strength-main>.strength-row .strength-track{margin-top:50px}
+.workout-sticky{position:sticky;top:0;z-index:12;background:var(--bg,#0D0D10);border:1px solid #414146;border-radius:10px;padding:10px 12px;margin:10px 0 16px;box-shadow:0 5px 14px #0007}
+.workout-clock{font-size:22px;font-weight:800;font-variant-numeric:tabular-nums;color:#F76C32;letter-spacing:.6px}
+.workout-sticky .row{margin-bottom:6px}
+.workout-sticky small{font-size:11px}
+.history-icons{display:flex;flex-direction:column;gap:5px;align-items:center;justify-content:center}
+.set-record-tags{display:flex;flex-wrap:wrap;gap:5px;margin:8px 0 2px;min-height:0;clear:both}
+.record-tag{display:inline-block;background:rgba(247,108,50,.15);color:#F76C32;border:1px solid #F76C32;border-radius:6px;font-size:11px;font-weight:750;padding:3px 7px;white-space:nowrap}
+.summary-scroll{max-height:70vh;overflow-y:auto;padding-bottom:12px}
+.summary-record{display:flex;flex-direction:column;gap:7px;border:1px solid #46464a;border-radius:9px;padding:12px;margin:10px 0}
+.summary-record .record-tag{align-self:flex-start}
+.summary-record small{color:var(--muted,#a8a8a8)}
+.record-load{background:rgba(247,108,50,.1);border:1px solid #6e3a29;border-radius:7px;text-align:center;padding:12px;font-size:18px;font-weight:800}
+.summary-ex{display:flex;justify-content:space-between;gap:10px;border-bottom:1px solid #37373c;padding:10px 2px}
+.summary-yes{color:#3ac879}.summary-no{color:#ff5b60}
+.agenda-shell{display:flex;flex-direction:column;min-height:260px;max-height:75vh;gap:10px}
+.agenda-scroll{flex:1;min-height:0;overflow-y:auto}
+.agenda-notes{width:100%;min-height:210px;resize:vertical;box-sizing:border-box;line-height:1.5;padding:14px;border:1px solid #4b4b4f;border-radius:8px;background:repeating-linear-gradient(transparent,transparent 28px,#ffffff0d 29px);color:inherit;font:inherit}
+.agenda-notes[readonly]{opacity:.8}
+.agenda-footer{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:9px 0 0;border-top:1px solid #45454a;flex-shrink:0}
+.agenda-calendar{display:flex;align-items:center;gap:5px;min-width:0}
+.agenda-calendar input{width:132px;min-width:0}
+.quick-stats{max-height:72vh;overflow-y:auto}
+#modal .sheet{max-height:90dvh;overflow-y:auto}
+
+.workout-sticky{top:calc(72px + env(safe-area-inset-top));z-index:2}
