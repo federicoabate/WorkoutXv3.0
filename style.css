@@ -231,3 +231,9 @@ button[data-action="toggleSearch"]::first-letter{font-size:19px}
 #modal .sheet{max-height:90dvh;overflow-y:auto}
 
 .workout-sticky{top:calc(72px + env(safe-area-inset-top));z-index:2}
+
+/* WorkoutX v3.0: icons, accessible agenda date and header editor */
+.history-duplicate{color:var(--text,#fff)!important;background:transparent!important;border-color:transparent!important;font-size:20px}
+.agenda-calendar{display:flex;flex-direction:column;gap:3px;align-items:center;font-size:11px;color:var(--muted,#aaa)}
+.agenda-calendar input{max-width:155px;min-width:130px;color:var(--text,#fff)}
+[data-action="quickStats"] svg{width:19px;height:19px;display:block}

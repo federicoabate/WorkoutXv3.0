@@ -1,36 +1,17 @@
-WorkoutX v2.9
-=============
-Base: WorkoutX v2.7. Installazione: caricare tutti i 10 file nella stessa
-cartella GitHub Pages; la cache PWA viene aggiornata a workoutx-shell-v290.
+WorkoutX v3.0 — aggiornamento mirato dalla v2.9
 
-NOVITA'
-- Livello di Forza: maggiore distanza tra testo e barra, "Media degli
-  esercizi di forza"; HP-BF: linea HP +2 e area HP>+2, BF<15%.
-- Sezione Esercizi nelle Statistiche inizialmente chiusa.
-- Storico: modifica con interfaccia dell'allenamento avviato e riordino
-  esercizi; duplicazione con icona sotto il cestino; durata nell'intestazione.
-- Allenamento: cronometro dall'avvio al salvataggio, intestazione sticky,
-  Completati in finestra sovrapposta, agenda e statistiche rapide esercizio.
-- Etichette informative per Nuovo PR, Nuovo nRM (se RIR 0), Record Ripetizioni
-  (solo carichi già presenti nello storico), senza modificare i calcoli.
-- Al termine: riepilogo con record e conteggi dei set eseguiti/non eseguiti;
-  un esercizio parzialmente eseguito compare in entrambi gli elenchi.
-- Agenda: note correnti salvate col workout; storico modificabile solo col
-  pulsante Salva; navigazione tra pagine e calendario anche in allenamento.
-- Statistiche: grafico "Tempo trascorso in allenamento" con ore arrotondate
-  per eccesso e durate pregresse mancanti considerate pari a 02:00:00.
-- Icone Programmi e Impostazioni aggiornate; versione visibile v2.9.
+- Duplica nello storico: stessa icona dei programmi, bianca; cestino rosso.
+- Grafico HP-BF: indicazione 0 a destra nella posizione HP=0, linea
+  tratteggiata e zona arancione invariati a HP=+2 e BF<15%.
+- Agenda: selettore data precompilato, navigazione al cambio data,
+  icona quaderno e penna durante la sessione.
+- Statistiche rapide: stessa icona della navigazione Statistiche.
+- Valori Corporei: sezione autonoma dopo Livello di Massa Muscolare.
+- Modifica di allenamento storico: modifica intestazione (nome, programma,
+  data, orario, durata) con applicazione alla sessione e salvataggio
+  definitivo tramite Termina e salva.
+- Versione visibile v3.0 e nuova cache PWA.
 
-COMPATIBILITA'
-Nessuna modifica al nome/versione del database IndexedDB, nessuna modifica
-allo schema dei backup JSON. I nuovi campi delle sessioni sono facoltativi.
-I vecchi allenamenti senza durata sono visualizzati come 02:00:00 senza
-riscrivere automaticamente i dati precedenti. Fare un backup JSON prima
-dell'aggiornamento e conservarlo.
-
-VERIFICHE
-Controllo sintassi JavaScript e test mirati con Node per record, riepilogo,
-compatibilita' durata, grafico e markup delle viste. Integrita' ZIP verificata.
-Non eseguito test reale Safari/iPad; il browser headless locale e' bloccato
-nell'ambiente di esecuzione, quindi e' raccomandato un collaudo su una copia
-di dati prima dell'uso quotidiano.
+Nessuna migrazione IndexedDB o modifica del formato dei backup JSON.
+Eseguire un backup JSON prima dell'aggiornamento. Sintassi e controlli
+statici mirati verificati; non collaudato su Safari/iPad.
